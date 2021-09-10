@@ -1,0 +1,11 @@
+name: update-dependents
+on: [push]
+
+jobs:
+  update-dependets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git clone https://github.com/mateusfg7Studies/use-modules && cd use-modules
+      - run: git submodule update --remote use-as-module
+      - run: git add . && git commit -m "Update Submodule: use-as-module" && git push
