@@ -8,4 +8,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: git clone https://github.com/mateusfg7Studies/use-modules && cd use-modules
       - run: git submodule update --remote use-as-module
-      - run: git add . && git commit -m "Update Submodule: use-as-module" && git push
+      - run: git add . 
+      - run: git commit -m "Update Submodule: use-as-module"
+      - run: git push
