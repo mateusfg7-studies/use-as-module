@@ -9,6 +9,7 @@ jobs:
       - name: Clone mateusfg7Studies/use-module repo
         run: git clone https://github.com/mateusfg7Studies/use-modules
       - name: Tets if is in the correct repo
+        working-directory: use-modules
         run: |
           pwd
           ls
