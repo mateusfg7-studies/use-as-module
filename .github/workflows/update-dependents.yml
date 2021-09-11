@@ -7,32 +7,33 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v2
-      
-      - name: Config Git
-        env:
-          TOKEN: ${{ secrets.MY_SECRET }}
-        run: |
-          git config --global user.email "mateusfelipefg77@gmail.com"
-          git config --global user.name "mateusfg7"
-          git config --global url."https://${TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
-      
-      - name: Clone mateusfg7Studies/use-module repo
-        run: git clone https://github.com/mateusfg7Studies/use-modules
+        with:
+          repository: mateusfg7Studies/use-modules
+          token: ${{ secrets.my_pat }}
+
+
+      #- name: Config Git
+      #  run: |
+      #    git config --global user.email "mateusfelipefg77@gmail.com"
+      #    git config --global user.name "mateusfg7"
+
+      #- name: Clone mateusfg7Studies/use-module repo
+      #  run: git clone https://github.com/mateusfg7Studies/use-modules
       
       - name: Init submodules
-        working-directory: use-modules
+        #  working-directory: use-modules
         run: git submodule update --init --recursive
       
       - name: Update remotly submodules
-        working-directory: use-modules
+        #  working-directory: use-modules
         run: git submodule update --remote use-as-module
       
       - name: Add and commit changed files
-        working-directory: use-modules
+        #  working-directory: use-modules
         run: |
           git add .
           git commit -m "Update Submodule: use-as-module"
       
       - name: See Logs
-        working-directory: use-modules
+        #working-directory: use-modules
         run: git log --oneline
