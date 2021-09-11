@@ -21,11 +21,11 @@ jobs:
       - name: Update remotly submodules
         run: git submodule update --remote use-as-module
 
-      #- name: Add and commit changed files
-      #  working-directory: use-modules
-      #  run: |
-      #    git add .
-      #    git commit -m "Update Submodule: use-as-module"
+      - name: Add and commit changed files
+        working-directory: use-modules
+        run: |
+          git add .
+          git commit -m "Update Submodule: use-as-module"
       
       #- name: See Logs
         #working-directory: use-modules
