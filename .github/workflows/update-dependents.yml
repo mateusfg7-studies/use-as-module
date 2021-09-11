@@ -20,7 +20,10 @@ jobs:
 
       - name: Update remotly submodules
         run: git submodule update --remote use-as-module
-
+      
+      - run: pwd && ls
+      - run: git status
+      
       - name: Add and commit changed files
         working-directory: use-modules
         run: |
@@ -30,5 +33,5 @@ jobs:
       #- name: See Logs
         #working-directory: use-modules
         #run: git log --oneline
-      - run: pwd && ls
-      - run: git status
+
+
