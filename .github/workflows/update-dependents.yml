@@ -18,9 +18,8 @@ jobs:
           git config --global user.email "mateusfelipefg77@gmail.com"
           git config --global user.name "mateusfg7"
 
-      #- name: Update remotly submodules
-      #  working-directory: use-modules
-      #  run: git submodule update --remote use-as-module
+      - name: Update remotly submodules
+        run: git submodule update --remote use-as-module
 
       #- name: Add and commit changed files
       #  working-directory: use-modules
