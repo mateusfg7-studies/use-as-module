@@ -24,7 +24,7 @@ jobs:
       - name: Add and commit changed files
         working-directory: use-modules
         run: |
-          git add .
+          git add use-as-module
           git commit -m "Update Submodule: use-as-module"
       
       #- name: See Logs
