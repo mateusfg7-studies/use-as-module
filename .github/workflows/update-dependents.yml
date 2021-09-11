@@ -25,9 +25,9 @@ jobs:
       #  working-directory: use-modules
       #  run: git submodule update --init --recursive
       
-      - name: Update remotly submodules
-        working-directory: use-modules
-        run: git submodule update --remote use-as-module
+      #- name: Update remotly submodules
+      #  working-directory: use-modules
+      #  run: git submodule update --remote use-as-module
 
       #- name: Add and commit changed files
       #  working-directory: use-modules
