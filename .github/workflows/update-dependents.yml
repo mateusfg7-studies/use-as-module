@@ -39,3 +39,4 @@ jobs:
         #working-directory: use-modules
         #run: git log --oneline
       - run: pwd && ls && git log --oneline
+      - run: ls use-as-module
