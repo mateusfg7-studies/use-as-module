@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: mateusfg7Studies/use-modules
-          token: ${{ secrets.my_pat }}
+          token: ${{ secrets.MY_SECRET }}
 
 
       #- name: Config Git
