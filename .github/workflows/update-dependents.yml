@@ -13,18 +13,11 @@ jobs:
           submodules: recursive
 
 
-      #- name: Config Git
-      #  run: |
-      #    git config --global user.email "mateusfelipefg77@gmail.com"
-      #    git config --global user.name "mateusfg7"
+      - name: Config Git
+        run: |
+          git config --global user.email "mateusfelipefg77@gmail.com"
+          git config --global user.name "mateusfg7"
 
-      #- name: Clone mateusfg7Studies/use-module repo
-      #  run: git clone https://github.com/mateusfg7Studies/use-modules
-      
-      #- name: Init submodules
-      #  working-directory: use-modules
-      #  run: git submodule update --init --recursive
-      
       #- name: Update remotly submodules
       #  working-directory: use-modules
       #  run: git submodule update --remote use-as-module
@@ -38,5 +31,5 @@ jobs:
       #- name: See Logs
         #working-directory: use-modules
         #run: git log --oneline
-      - run: pwd && ls && git log --oneline
-      - run: ls use-as-module
+      - run: pwd && ls
+      - run: git status
